@@ -9,7 +9,7 @@ class BirdsController < ApplicationController
                         continents: bparams[:continents],
                         id: UUID.generate,
                         visible: get_visible(bparams[:visible]),
-                        Time.now.strftime(""))
+                        added: Time.now.strftime("%Y-%m-%d"))
         saved = bird.save
       end
     rescue
